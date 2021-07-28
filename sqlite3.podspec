@@ -24,7 +24,7 @@ LICENSE
     ss.public_header_files = "#{archive_name}/sqlite3.h"
     ss.osx.pod_target_xcconfig = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1' }
     # Disable OS X / AFP locking code on mobile platforms (iOS, tvOS, watchOS)
-    sqlite_xcconfig_ios = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1 -DSQLITE_ENABLE_LOCKING_STYLE=0' }
+    sqlite_xcconfig_ios = { 'OTHER_CFLAGS' => '$(inherited) -DHAVE_USLEEP=1 -DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_ENABLE_ICU=1' }
     ss.ios.pod_target_xcconfig = sqlite_xcconfig_ios
     ss.tvos.pod_target_xcconfig = sqlite_xcconfig_ios
     ss.watchos.pod_target_xcconfig = sqlite_xcconfig_ios
